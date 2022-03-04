@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Starbucks Coffe Korea</title>
 
+    <!-- 소셜 카드 -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Starbucks" />
     <meta property="og:title" content="Starbucks Coffee Korea" />
@@ -25,23 +26,33 @@
     <meta property="twitter:image" content="./images/starbucks_seo.jpg" />
     <meta property="twitter:url" content="https://starbucks.co.kr" />
 
+    <!-- 구글 폰트 -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap"
       rel="stylesheet"
     />
 
+    <!-- 구글 아이콘 -->
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
 
+    <!-- 파비콘 -->
     <link rel="icon" href="./favicon.png" />
+
+    <!-- RESET.CSS -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
     />
+
+    <!-- CSS -->
     <link rel="stylesheet" href="./css/main.css" />
+
+    <!-- Java Script -->
+    <script defer src="./js/main.js"></script>
   </head>
   <body>
     <!-- HEADER -->
@@ -54,23 +65,30 @@
             alt="STARTBUCKS"
           />
         </a>
-        <div class="header__menu">
-          <ul class="header__top_menu">
-            <li class="header__top_menu_item"><a href="#">Sign In</a></li>
-            <li class="header__top_menu_item">
-              <a href="#">My Starbucks</a>
+        <div class="header__menus">
+          <ul class="header__submenu">
+            <li class="header__submenu__item">
+              <a class="header__submenu__item__link" href="#">Sign In</a>
             </li>
-            <li class="header__top_menu_item">
-              <a href="#">Customer Service & Ideas</a>
+            <li class="header__submenu__item">
+              <a class="header__submenu__item__link" href="#">My Starbucks</a>
             </li>
-            <li class="header__top_menu_item">
-              <a href="#">Find a Store</a>
+            <li class="header__submenu__item">
+              <a class="header__submenu__item__link" href="#"
+                >Customer Service & Ideas</a
+              >
             </li>
-            <li class="header__top_menu_item">
-              <a href="#"><span class="material-icons"> search </span></a>
+            <li class="header__submenu__item">
+              <a class="header__submenu__item__link" href="#">Find a Store</a>
+            </li>
+            <li class="header__submenu__item">
+              <div class="header__submenu__item__search">
+                <input class="header__submenu__item__search__input" />
+                <div class="material-icons">search</div>
+              </div>
             </li>
           </ul>
-          <ul class="header__middle_menu">
+          <ul class="header__mainmenu">
             <li class="header__middle_menu_item">
               <a href="#"><span>COFFEE</span></a>
               <div class="header__middle_menu_itemContents">
