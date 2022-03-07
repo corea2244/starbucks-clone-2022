@@ -40,10 +40,19 @@ window.addEventListener('scroll', _.throttle(function(){
 // _.throttle(함수, 시간)
 
 
+// visual animation
 const fadeEls = document.querySelectorAll('.visual .fade-in');
 fadeEls.forEach(function (fadeEl, index) {
     gsap.to(fadeEl, 1, {
         delay: (index + 1) * .5,
         opacity: 1
     });
+});
+
+
+// Swiper
+new Swiper('.notice__line .swiper-container', {
+    direction: 'vertical',
+    autoplay: true,
+    loop: true
 });
