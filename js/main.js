@@ -56,3 +56,21 @@ new Swiper('.notice__line .swiper-container', {
     autoplay: true,
     loop: true
 });
+
+new Swiper('.notice__promotion .swiper-container', {
+    slidesPerView: 3,
+    spaceBetween: 10,
+    centeredSlides: true,
+    loop: true,
+    autoplay: {
+        delay: 5000
+    },
+    pagination: {
+        el: '.notice__promotion .swiper-pagination', // 페이지 번호 요소 선택자
+        clickable: true // 사용자의 페이지 번호 요소 제어 가능 여부
+    },
+    navigation: {
+        prevEl: '.notice__promotion .swiper-prev',
+        nextEl: '.notice__promotion .swiper-next'
+    }
+});
