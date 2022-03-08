@@ -389,6 +389,11 @@ header {
   background-color: #f6f5ef;
   display: flex;
   justify-content: center;
+  transition: height 0.4s;
+  overflow: hidden;
+}
+.notice__promotion.hide {
+  height: 0;
 }
 .notice__promotion .swiper-container {
   width: calc(819px * 3 + 20px);
@@ -399,6 +404,7 @@ header {
   opacity: 0.5;
   transition: opacity 1s;
   position: relative;
+  overflow: hidden;
 }
 .notice__promotion .swiper-slide-active {
   opacity: 1;
