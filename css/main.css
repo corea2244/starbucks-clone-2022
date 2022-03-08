@@ -405,6 +405,8 @@ header {
   transition: opacity 1s;
   position: relative;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
 }
 .notice__promotion .swiper-slide-active {
   opacity: 1;
@@ -463,4 +465,53 @@ header {
 .notice__promotion .swiper-next:hover {
   background-color: #333;
   color: #fff;
+}
+
+/* REWARDS */
+.rewards {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.rewards .bg-left {
+  width: 50%;
+  height: 100%;
+  background-color: #272727;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.rewards .bg-right {
+  width: 50%;
+  height: 100%;
+  background-color: #d5c798;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.rewards__inner {
+  z-index: 1;
+  width: 1200px;
+  background-image: url("../images/rewards.jpg");
+  background-repeat: no-repeat;
+  height: 241px;
+  position: relative;
+}
+.rewards__inner__btnGroup {
+  position: absolute;
+  bottom: 24px;
+  right: 0;
+  width: 250px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.rewards__inner__btnGroup .sign-up {
+  margin-right: 10px;
+}
+.rewards__inner__btnGroup .sign-in {
+  width: 110px;
+}
+.rewards__inner__btnGroup .gift {
+  margin-top: 10px;
+  flex-grow: 1;
 }
