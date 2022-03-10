@@ -657,3 +657,55 @@ header {
 .pick-your-favorite__inner__text-group .description {
   margin-bottom: 40px;
 }
+
+/* RESERVE STORE */
+.reserve-store {
+  height: 600px;
+  background-image: url("../images/reserve_store_bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.reserve-store__inner {
+  width: 1200px;
+  height: 600px;
+  position: absolute;
+  left: 50%;
+  margin-left: calc(1200px / -2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.reserve-store__inner__medal {
+  width: 334px;
+  height: 334px;
+  perspective: 600px;
+}
+.reserve-store__inner__medal .front,
+.reserve-store__inner__medal .back {
+  position: absolute;
+  width: 334px;
+  height: 334px;
+  backface-visibility: hidden;
+  transition: 1s;
+}
+.reserve-store__inner__medal .front {
+  transform: rotateY(0deg);
+}
+.reserve-store__inner__medal:hover .front {
+  transform: rotateY(180deg);
+}
+.reserve-store__inner__medal .back {
+  transform: rotateY(-180deg);
+}
+.reserve-store__inner__medal:hover .back {
+  transform: rotateY(0deg);
+}
+.reserve-store__inner__medal .back .btn {
+  position: absolute;
+  top: 240px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
