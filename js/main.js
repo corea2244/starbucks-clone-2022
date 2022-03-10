@@ -75,7 +75,7 @@ new Swiper('.notice__promotion .swiper-container', {
     }
 });
 
-
+// 버튼 클릭시 사라지게 하는 애니메이션
 const promotionEl = document.querySelector('.notice__promotion');
 const promotionToggleBtn = document.querySelector('.toggle-promotion');
 let isHidePromotion = false;
@@ -95,6 +95,7 @@ promotionToggleBtn.addEventListener('click', function() {
 function random(min, max){
     return parseFloat((Math.random() * (max - min) + min).toFixed(2));
 }
+// floating 되어서 랜덤하게 움직이는 아이콘 애니메이션 추가
 function floatingObject(selector, delay, size){
     gsap.to(selector, random(1.5, 2.5), {
         y: size,
@@ -107,3 +108,15 @@ function floatingObject(selector, delay, size){
 floatingObject('.floating1', 1, 15);
 floatingObject('.floating2', 0.5, 15);
 floatingObject('.floating3', 1.5, 20);
+
+// 스크롤이 내려감에 따라 자동으로 보이게 하는 애니메이션
+const spyEls = document.querySelectorAll('section.scroll-spy');
+spyEls.forEach(function(spyEl) {
+    new ScrollMagic
+        .Scene({
+            triggerElement: spyEl, // 보여짐 여부를 감시할 요소를 지정
+            triggerHook: .8 // 화면 높이의 80% 위치에 감시할 트리거를 위치시키겠다는 의미
+        })
+        .setClassToggle(spyEl, 'show')
+        .addTo(new ScrollMagic.Controller());
+});
