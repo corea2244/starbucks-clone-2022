@@ -75,6 +75,18 @@ new Swiper('.notice__promotion .swiper-container', {
     }
 });
 
+new Swiper('.awards .swiper-container', {
+    autoplay: true,
+    loop: true,
+    apaceBetween: 30,
+    slidesPerView: 5,
+    navigation: {
+        prevEl: '.awards .swiper-prev',
+        nextEl: '.awards .swiper-next'
+    }
+});
+
+
 // 버튼 클릭시 사라지게 하는 애니메이션
 const promotionEl = document.querySelector('.notice__promotion');
 const promotionToggleBtn = document.querySelector('.toggle-promotion');
