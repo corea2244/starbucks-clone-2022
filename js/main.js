@@ -132,3 +132,8 @@ spyEls.forEach(function(spyEl) {
         .setClassToggle(spyEl, 'show')
         .addTo(new ScrollMagic.Controller());
 });
+
+
+// 자동으로 연도 받아오는 기능
+const thisYear = document.querySelector('.this-year');
+thisYear.textContent = new Date().getFullYear(); // 2022
